@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Development</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Coming Soon</h1>
+            <h2 style="font-weight: 400; font-size: 30px;">Sorry, this product is still being developed. Check back later!</h2>
+            <p>Want to be notified when it's ready? Enter your email below:</p>
+            <form id="emailForm">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Notify Me</button>
+            </form>
+
+            <script>
+            document.getElementById("emailForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                var email = document.querySelector('input[name="email"]').value;
+                
+                fetch("https://script.google.com/macros/s/AKfycbxv39UeW9SJfWXKxpI4waR5VrIHohd9G6znkQc0WOz_RckBaHpetVaOrTEmaMFLCJ7k/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: email })
+                })
+                .then(response => response.text())
+                .then(data => alert("Email submitted successfully!"))
+                .catch(error => alert("Error submitting email"));
+            });
+            </script>
+
+        </div>
+    </div>
+</body>
+</html>

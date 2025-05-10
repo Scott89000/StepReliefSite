@@ -1,0 +1,227 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif; 
+  
+  background: linear-gradient(135deg, rgba(106, 127, 219, 0.906), #e5c290d6),  
+  url('../assets/Basketball-Court.png'); /* Replace with your actual file name */
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.15); /* Subtle, low-opacity white */
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Content */
+.content {
+    flex: 1;
+    text-align: left;
+    padding-right: 50px;
+}
+
+/* Header */
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Sub-phrase */
+p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+p:last-of-type {
+    font-style: italic;
+}
+
+/* Product Image */
+.image-container {
+    flex: 1;
+}
+
+.product-image {
+    position: absolute;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 12px;
+    top: 35px;
+    left: 520px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.second-image {
+  position: absolute;
+  width: 80%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  top: 255px;
+  left: 740px;
+  transform: rotate(-10deg); /* Slight diagonal tilt */
+  
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 18px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #e8a16b, #e5c190);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0px 5px 20px rgba(49, 52, 52, 0.5);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #e8a16b, #e5c190);
+    transform: scale(1.1);
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  body {
+      height: auto;
+      display: block;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .container {
+      flex-direction: column;
+      max-width: 100%;
+      padding: 20px;
+  }
+
+  .content {
+      padding-right: 0;
+      text-align: center;
+  }
+
+  h1 {
+      font-size: 36px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  p {
+      font-size: 18px;
+      line-height: 1.5;
+  }
+
+  /* Adjust button for better touch usability */
+  .cta-button {
+      padding: 15px 40px;
+      font-size: 18px;
+      margin-top: 20px;
+  }
+
+  /* Make images scale properly */
+  .image-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .product-image, .second-image {
+      position: static;
+      max-width: 90%;
+      margin-bottom: 20px;
+      transform: none;
+  }
+}
+
+/* Email Input Styles */
+form {
+    margin-top: 20px;
+}
+
+/* Email Input Styles */
+form {
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 83%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #e8a16b, #e5c190);
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Logo Image */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 325px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
